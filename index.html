@@ -5,83 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document   DOM</title>
 
+
+    <!-- METTO LO STILE = CSS IN PAGINA -->
     <style>
-/* SFONDO MINIMO CSS PER PAGINA */
+
+
+
+/* SFONDO MINIMO PER PAGINA */
         body {
+
             margin: 0 ; 
             font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(80deg, orange, yellow);
+            background: linear-gradient(10deg, orange, yellow);
             color: black;
+            padding: 20px;
+      
         }
 
-        
-        /* CONTENITORE PER I BOTTONI */
-        .container{
-            width: 100px;
-            max-width: 820px;
-            justify-content: center;
-        }
-        
-        
-/* TITOLO H1 */
-.titolo-box{
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    margin: 6px 0 0;
-    font-weight: 900;
-    letter-spacing: 0.4px;
-    border: 2px solid black;
-}
+    
+                
+        /* TITOLO H1 */
+    h1{
 
-/* PRESE PARTI A PARTICOLARE */
- 
-.titolo-box p {
-   
-    text-align: end;
-    display: flex;
-    margin: 6px 0 0;
-   color: black;
-   font-size: large;
-}
+        font-weight: 800;
+       margin: 0 0 12px;
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 8px;
+        background-color: antiquewhite;
+        display: inline-block;
+    }
 
-/* BOTTONI */
+
+
+/* CONTENITORE PARAGRAFI */
 
 .bottoni {
+    margin: 12px 0;
     display: flex;
-    gap: 11px;
+    gap: 12px;
     flex-wrap: wrap;
-    margin: 12px 0 14px;
 }
 
 
-/* STILE AI .bottoni */
+
+
+/* STILE  .bottoni */
 
 button {
     padding: 10px 12px;
-    background-color: yellow;
-    color: black;
-    border: 2px double white;
-    font-weight: 600;
+  display: flex;
+  background-color: aqua;
+ border-radius: 15px;
+  border: 3px double red;
+   
 }
 
-/* Hover */
-
-button:hover {
-    background-color:black;
-    color: yellow;
-    }
-
+button:hover{
+   
+    background-color: black;
+    color:white;
+}
 
     /* PARAGRAFI */
 
     .paragrafo {
-        background-color: yellow;
-        padding: 14px;
-        margin: 10px 0;
-        border: 1px dotted red;
+       color: black;
+       border: 2px outset red;
+       background-color: wheat;
+        padding: 12px;
+        margin: 10px;
+        border: 2px dotted red;
 
     }
+
 
 
 
@@ -91,14 +88,13 @@ button:hover {
     
 <!-- TITOLO -->
 
-<div class="titolo-box">
-    <h1>Selfwork DOM 1</h1>
-    <p>3 paragrafi + 3 bottoni. Colori random, grassetto, nascondi/mostra.</p>
-</div>
 
-<div class="container">
+    <h1>Selfwork DOM 1</h1>
+   
+
+
     <div class="bottoni">
-        <button id="btn-colore">Cambia colori (random)</button>
+        <button id="btn-colore">Cambia colori</button>
         <button id="btn-grassetto">Grassetto ON/OFF</button>
         <button id="btn-visibilita">Nascondi / Mostra</button>
     </div>
@@ -108,64 +104,107 @@ button:hover {
     <p id="p3" class="paragrafo">Paragrafo 3: posso farli scomparire e ricomparire.</p>
 
 
-
-
 <script>
 
     // AVVIO DEL MIO JS NEL LAVORO -> Prendo elementi e li Trasformo; 
-
-//JS PER BOTTONI
-
-const btnColore = document.getElementById("btn-colore")
- const btnGrassetto = document.getElementById("btn-grassetto")
-const btnVisibilità = document.getElementById("btn-visibilità")
-
-
+    
     //JS PER PARAGRAFI
     const p1 = document.getElementById("p1");
     const p2 = document.getElementById("p2");
      const p3 = document.getElementById("p3");
+     
+     
+     //JS PER BOTTONI
+     
+     const btnColore = document.getElementById("btn-colore")
+      const btnGrassetto = document.getElementById("btn-grassetto")
+     const btnVisibilità = document.getElementById("btn-visibilita")
 
 
      //Creo Variabili per renderli Visione
 
-     let paragrafiVisione = true;
+     let paragrafiVisibili = true;
      let grassettoAttivo = false;
-
-     console.log("Pagina fatta per visione.");
 
 // AGGIUNGO LA FUNZIONE PER EFFETTIVITA' SULL'ANIMAZIONE JS ALLA PaginA:
 
-function coloreRandom() {
-    let
-    let
-    let 
-
-    while () {
-        
+    function cambiaColoreParagrafi() {
+         p1.style.color = "red";
+        p2.style.color = "orange";
+        p3.style.color = "gold";
     }
-    
+
+
+ function toggleGrassetto() {
+   
+    grassettoAttivo = !grassettoAttivo;
+
+
+if ( grassettoAttivo === true ) {
+    p1.style.fontWeight ="800";
+    p2.style.fontWeight = "800";
+    p3.style.fontWeight = "800";
+
+
+} else {
+    p1.style.fontWeight = "400";
+    p2.style.fontWeight ="400";
+    p3.style.fontWeight ="400";
+  
+
+}
 }
 
 
-
-
-//Funzione per cambiare colore 
-
-function cambiaColoreParagrafi(p1,p2,p3) {
-    console.log("Click: cambia il colore!");
-
-    const [] =   ();
+//FUNZIONE VISIBILITA'
 
 
 
-    console.log("Nuovi colori!");
-
-
-
+function toggleVisibilita() {
     
+
+ paragrafiVisibili = !paragrafiVisibili;
+
+    if (paragrafiVisibili === true) {
+        p1.style.display = "block";
+        p2.style.display = "block";
+        p3.style.display = "block";
+     
+    }else{
+
+        p1.style.display = "none";
+          p2.style.display = "none";
+            p3.style.display = "none";
+           
+    }
 }
+
+
+// addEventListener per le funzioni. invocazioni. Eventi;
+
+btnColore.addEventListener("click", cambiaColoreParagrafi);
+btnGrassetto.addEventListener("click", toggleGrassetto);
+btnVisibilità.addEventListener("click", toggleVisibilita);
+
+
+
+
 </script>
 
 </body>
 </html>
+
+
+<!-- // Selfwork DOM 1
+// Lavora con il DOM:
+// crea una pagina HTML con 3 paragrafi e 3 bottoni.
+// Il primo bottone dovra’ cambiare il colore del testo dei paragrafi in modo casuale.
+// ogni paragrafo dovra' avere un colore diverso.
+// il secondo dovra’ rendere il testo dei paragrafi in grassetto.
+// il terzo dovra’ far scomparire e ricomparire i paragrafi.
+
+// TIPS:
+// ricordati della proprieta’ display: none in CSS!
+// i colori su CSS sono formati da R, G e B. Quindi puoi settare un colore random semplicemente randomizzando questi tre
+// valori e mettendoli insieme grazie al Math.random().
+// Se non riesci in autonomia, segui il video-selfwork. -->
