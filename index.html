@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document   DOM</title>
+
+    <style>
+/* SFONDO MINIMO CSS PER PAGINA */
+        body {
+            margin: 0 ; 
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(80deg, orange, yellow);
+            color: black;
+        }
+
+        
+        /* CONTENITORE PER I BOTTONI */
+        .container{
+            width: 100px;
+            max-width: 820px;
+            justify-content: center;
+        }
+        
+        
+/* TITOLO H1 */
+.titolo-box{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: 6px 0 0;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    border: 2px solid black;
+}
+
+/* PRESE PARTI A PARTICOLARE */
+ 
+.titolo-box p {
+   
+    text-align: end;
+    display: flex;
+    margin: 6px 0 0;
+   color: black;
+   font-size: large;
+}
+
+/* BOTTONI */
+
+.bottoni {
+    display: flex;
+    gap: 11px;
+    flex-wrap: wrap;
+    margin: 12px 0 14px;
+}
+
+
+/* STILE AI .bottoni */
+
+button {
+    padding: 10px 12px;
+    background-color: yellow;
+    color: black;
+    border: 2px double white;
+    font-weight: 600;
+}
+
+/* Hover */
+
+button:hover {
+    background-color:black;
+    color: yellow;
+    }
+
+
+    /* PARAGRAFI */
+
+    .paragrafo {
+        background-color: yellow;
+        padding: 14px;
+        margin: 10px 0;
+        border: 1px dotted red;
+
+    }
+
+
+
+    </style>
+</head>
+<body>
+    
+<!-- TITOLO -->
+
+<div class="titolo-box">
+    <h1>Selfwork DOM 1</h1>
+    <p>3 paragrafi + 3 bottoni. Colori random, grassetto, nascondi/mostra.</p>
+</div>
+
+<div class="container">
+    <div class="bottoni">
+        <button id="btn-colore">Cambia colori (random)</button>
+        <button id="btn-grassetto">Grassetto ON/OFF</button>
+        <button id="btn-visibilita">Nascondi / Mostra</button>
+    </div>
+
+    <p id="p1" class="paragrafo">Paragrafo 1: clicco e cambia il colore in modo casuale.</p>
+    <p id="p2" class="paragrafo">Paragrafo 2: posso mettere tutto in grassetto.</p>
+    <p id="p3" class="paragrafo">Paragrafo 3: posso farli scomparire e ricomparire.</p>
+
+
+
+
+<script>
+
+    // AVVIO DEL MIO JS NEL LAVORO -> Prendo elementi e li Trasformo; 
+
+//JS PER BOTTONI
+
+const btnColore = document.getElementById("btn-colore")
+ const btnGrassetto = document.getElementById("btn-grassetto")
+const btnVisibilità = document.getElementById("btn-visibilità")
+
+
+    //JS PER PARAGRAFI
+    const p1 = document.getElementById("p1");
+    const p2 = document.getElementById("p2");
+     const p3 = document.getElementById("p3");
+
+
+     //Creo Variabili per renderli Visione
+
+     let paragrafiVisione = true;
+     let grassettoAttivo = false;
+
+     console.log("Pagina fatta per visione.");
+
+// AGGIUNGO LA FUNZIONE PER EFFETTIVITA' SULL'ANIMAZIONE JS ALLA PaginA:
+
+function coloreRandom() {
+    let
+    let
+    let 
+
+    while () {
+        
+    }
+    
+}
+
+
+
+
+//Funzione per cambiare colore 
+
+function cambiaColoreParagrafi(p1,p2,p3) {
+    console.log("Click: cambia il colore!");
+
+    const [] =   ();
+
+
+
+    console.log("Nuovi colori!");
+
+
+
+    
+}
+</script>
+
+</body>
+</html>
