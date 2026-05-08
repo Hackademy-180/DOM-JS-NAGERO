@@ -26,14 +26,14 @@
                 
         /* TITOLO H1 */
     h1{
-
+text-align: center;
         font-weight: 800;
        margin: 0 0 12px;
-        display: inline-block;
+        display: inherit;
         border: 2px solid black;
         border-radius: 8px;
         background-color: antiquewhite;
-        display: inline-block;
+        
     }
 
 
@@ -70,6 +70,8 @@ button:hover{
     /* PARAGRAFI */
 
     .paragrafo {
+        text-align: center;
+        display: flex;
        color: black;
        border: 2px outset red;
        background-color: wheat;
@@ -91,7 +93,7 @@ button:hover{
 
     <h1>Selfwork DOM 1</h1>
    
-
+<!-- / crea una pagina HTML con 3 paragrafi e 3 bottoni. -->
 
     <div class="bottoni">
         <button id="btn-colore">Cambia colori</button>
@@ -127,11 +129,28 @@ button:hover{
      let grassettoAttivo = false;
 
 // AGGIUNGO LA FUNZIONE PER EFFETTIVITA' SULL'ANIMAZIONE JS ALLA PaginA:
+let coloriA =true;
 
     function cambiaColoreParagrafi() {
-         p1.style.color = "red";
-        p2.style.color = "orange";
-        p3.style.color = "gold";
+
+        if (coloriA === true) {
+            p1.style.color = "green";
+            p2.style.color = "blue";
+            p3.style.color = "gray";
+            coloriA = false;
+
+        }else{
+
+
+            p1.style.color = "red";
+            p2.style.color = "orange";
+            p3.style.color = "black";
+
+            
+            
+            coloriA = true;
+        }
+       
     }
 
 
