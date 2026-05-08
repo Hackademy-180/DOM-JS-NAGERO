@@ -6,7 +6,7 @@
     <title>Document   DOM</title>
 
 
-    <!-- METTO LO STILE = CSS IN PAGINA -->
+    <!-- METTO LO STILE = CSS -->
     <style>
 
 
@@ -16,7 +16,8 @@
 
             margin: 0 ; 
             font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(10deg, orange, yellow);
+            background:darkblue;
+            opacity: 58%;
             color: black;
             padding: 20px;
       
@@ -26,22 +27,24 @@
                 
         /* TITOLO H1 */
     h1{
-text-align: center;
-        font-weight: 800;
-       margin: 0 0 12px;
-        display: inherit;
-        border: 2px solid black;
-        border-radius: 8px;
-        background-color: antiquewhite;
+
+
+       text-decoration: overline aliceblue;
+       text-align: center;
+       font-weight: 800;
+       text-transform: uppercase;
+        margin-top: 12px;
+        display: block;
+        letter-spacing: 2px;
         
     }
 
 
 
-/* CONTENITORE PARAGRAFI */
 
 .bottoni {
-    margin: 12px 0;
+  
+    margin: 12px 20px;
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
@@ -49,36 +52,54 @@ text-align: center;
 
 
 
+/* CONTENITORE DEI BOTTONI */
 
+.button-container{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 35px;
+
+}
 /* STILE  .bottoni */
 
 button {
-    padding: 10px 12px;
-  display: flex;
-  background-color: aqua;
- border-radius: 15px;
-  border: 3px double red;
-   
+   font-weight: bold;
+   font-size: 1rem;
+   flex-direction: column;
+   padding: 15px 12px;
+   display: flex;
+   /* background-color: aqua; */
+   border-radius: 12px;
+   border: 3px double red;
+   width: 180px;
 }
 
 button:hover{
-   
+   border: 2px dotted cyan;
     background-color: black;
     color:white;
 }
 
+
+
+
+
+.content-wrapper{
+    
+    border-radius: 10px;
+   
+}
     /* PARAGRAFI */
 
     .paragrafo {
-        text-align: center;
-        display: flex;
+      text-align: justify;
        color: black;
        border: 2px outset red;
-       background-color: wheat;
+        background-color: wheat;
         padding: 12px;
-        margin: 10px;
-        border: 2px dotted red;
-
+        margin: auto;
+       
     }
 
 
@@ -95,15 +116,28 @@ button:hover{
    
 <!-- / crea una pagina HTML con 3 paragrafi e 3 bottoni. -->
 
-    <div class="bottoni">
+    <div class="button-container">
         <button id="btn-colore">Cambia colori</button>
         <button id="btn-grassetto">Grassetto ON/OFF</button>
         <button id="btn-visibilita">Nascondi / Mostra</button>
     </div>
 
+
+    <div class="content-wrapper">
     <p id="p1" class="paragrafo">Paragrafo 1: clicco e cambia il colore in modo casuale.</p>
     <p id="p2" class="paragrafo">Paragrafo 2: posso mettere tutto in grassetto.</p>
     <p id="p3" class="paragrafo">Paragrafo 3: posso farli scomparire e ricomparire.</p>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 
 <script>
@@ -227,3 +261,33 @@ btnVisibilità.addEventListener("click", toggleVisibilita);
 // i colori su CSS sono formati da R, G e B. Quindi puoi settare un colore random semplicemente randomizzando questi tre
 // valori e mettendoli insieme grazie al Math.random().
 // Se non riesci in autonomia, segui il video-selfwork. -->
+
+
+
+//funzione deve avere dentro alle tonde un nome di parametro (elemento) al quale applichi la funzione proprietà
+
+
+ function applicoTemaColore( paragrafo ) {
+    
+
+
+    //operazione matematica
+
+    //Math.random -> genera 1 numero casuale tra 0 e 1 ( 0 incluso, ed 1 escluso );
+    //Math.floor -> arrotonda un numero con la virgola (float) arrotonda x difetto , e ti restituisce il valore + piccolo.
+
+    let scelta = Math.floor(Math.random() * 3) + 1;
+ 
+
+    switch(scelta) {
+        case 1:
+      paragrafo.style.color = rgb(red, green, blue) ;
+        break;
+
+        case 2: 
+      paragrafo.style.color = "rgb(FF0040)";
+        break;
+        case 2:
+      paragrafo.style.color = "rgb(verde)";
+        break;
+    } } 
