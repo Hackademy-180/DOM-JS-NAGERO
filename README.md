@@ -1,1 +1,3 @@
 # DOM-JS-NAGERO
+Ho scelto a svolegere il compito ad un file unico, esercitare la vista della produzione del lavoro codice, inseriti tag per usare css e js con html insieme. La traccia di questo lavoro , prevedeva uso delle funzioni per svolgere con il javascript un lavoro che accompagnato al css ( lo stile) rendeva idea per la sua funzione di cambiamento ed efficacia del lavoro che svolgono le propietà, regole e dinamicità al'interno del codice html; Lavoro che chiedeva ad inserire dei bottoni ed anche paragrafi per esempio .
+Ho provato a svolgere la funzione con math.random , probabilmente non l'ho capito molto come si faceva.Ho lasciato comunque in commento; 
